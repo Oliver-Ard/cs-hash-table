@@ -1,4 +1,5 @@
 import HashMap from "./modules/HashMap.js";
+import HashSet from "./modules/HashSet.js";
 
 function printHashMap() {
 	const hashMap = new HashMap();
@@ -56,5 +57,52 @@ function printHashMap() {
 	hashMap.clear();
 	console.log("--------------------------------");
 	console.log(`The hash map now has ${hashMap.length} keys!`);
+	console.log("--------------------------------");
 }
 printHashMap();
+
+function printHashSet() {
+	const hashSet = new HashSet();
+
+	hashSet.add("Bolivia");
+	hashSet.add("San Marino");
+	hashSet.add("Jamaica");
+	hashSet.add("Cuba");
+	hashSet.add("Bahrain");
+	hashSet.add("Germany");
+	hashSet.add("Maldives");
+	hashSet.add("Solomon Islands");
+	hashSet.add("Dominican Republic");
+	hashSet.add("Argentina");
+	hashSet.add("Georgia");
+	hashSet.add("Brunei");
+	hashSet.add("Luxembourg");
+	hashSet.add("Kazakhstan");
+	hashSet.add("Croatia");
+
+	console.log("This is a hash set that contains keys with countries.");
+	console.log("--------------------------------");
+	console.log(`We have ${hashSet.length} keys in the hash set!`);
+	console.log("--------------------------------");
+	console.log("Keys:");
+	console.log(hashSet.keys);
+	console.log("--------------------------------");
+	console.log("Let's remove Germany and Jamaica!");
+	console.log("--------------------------------");
+	hashSet.delete("Germany");
+	hashSet.delete("Jamaica");
+	console.log(`We have ${hashSet.length} keys in the hash set!`);
+	console.log("--------------------------------");
+	console.log("Keys:");
+	console.log(hashSet.keys);
+	console.log("--------------------------------");
+	console.log(`Cuba is in the hash set? ${hashSet.has("Cuba")}`);
+	console.log("--------------------------------");
+	console.log(`What about Belgium? ${hashSet.has("Belgium")}`);
+	console.log("--------------------------------");
+	console.log("Let's clear the hash set!");
+	hashSet.clear();
+	console.log("--------------------------------");
+	console.log(`The hash set now has ${hashSet.length} keys!`);
+}
+printHashSet();
